@@ -9,7 +9,7 @@ module.exports = function( io ){
 
     /* broadcast to all the other connections on this socket */
     socket.on('chat', function (msg) {
-      socket.broadcast.emit('chat', msg);
+      socket.emit('chat', '寶寶說：'+msg);
     });
 
   });
